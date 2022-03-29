@@ -11,6 +11,7 @@
 		2DEC1A8827F3D0CB00C9B50D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC1A8727F3D0CB00C9B50D /* ContentView.swift */; };
 		2DEC1A8A27F3D0D500C9B50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DEC1A8927F3D0D500C9B50D /* Assets.xcassets */; };
 		2DEC1A8D27F3D0D500C9B50D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DEC1A8C27F3D0D500C9B50D /* Preview Assets.xcassets */; };
+		2DEC1A9827F3D24300C9B50D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC1A9727F3D24300C9B50D /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2DEC1A8727F3D0CB00C9B50D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2DEC1A8927F3D0D500C9B50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DEC1A8C27F3D0D500C9B50D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2DEC1A9727F3D24300C9B50D /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				2DEC1A8527F3D0CB00C9B50D /* CookcademyApp.swift */,
 				2DEC1A8727F3D0CB00C9B50D /* ContentView.swift */,
+				2DEC1A9727F3D24300C9B50D /* Recipe.swift */,
 				2DEC1A8927F3D0D500C9B50D /* Assets.xcassets */,
 				2DEC1A8B27F3D0D500C9B50D /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DEC1A9827F3D24300C9B50D /* Recipe.swift in Sources */,
 				2DEC1A8827F3D0CB00C9B50D /* ContentView.swift in Sources */,
 				2DEC1A8627F3D0CB00C9B50D /* CookcademyApp.swift in Sources */,
 			);
