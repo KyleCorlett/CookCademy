@@ -11,6 +11,16 @@ struct Recipe {
     var mainInformation: MainInformation
     var ingredients: [String]
     var directions: [String]
+    
+    init(mainInformation: MainInformation, ingredients:[Ingredient], directions:[Direction]){
+        self.mainInformation = mainInformation
+        self.ingredients = ingredients
+        self.directions = directions
+    }
+    
+    init(){
+        self.init(mainInformation: MainInformation(name: "", description: "", author: "", category: .breakfast, ingredients: [], directions: []))
+    }
 }
 
 struct MainInformation{
