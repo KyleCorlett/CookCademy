@@ -7,10 +7,18 @@
 
 import Foundation
 
-struct Recipe {
+struct Recipe: Identifiable {
+    var id = UUID()
+    
     var mainInformation: MainInformation
-    var ingredients: [String]
-    var directions: [String]
+    var ingredients: [Ingredient]
+    var directions: [Direction]
+    
+    init() {
+        self.init(mainInformation: MainInformation(name: "", description: "", author: "", category: .breakfast),
+                  ingredients: [],
+                  directions: [])
+    }
     
     init(mainInformation: MainInformation, ingredients:[Ingredient], directions:[Direction]){
         self.mainInformation = mainInformation
@@ -18,16 +26,13 @@ struct Recipe {
         self.directions = directions
     }
     
-    init(){
-        self.init(mainInformation: MainInformation(name: "", description: "", author: "", category: .breakfast, ingredients: [], directions: []))
-    }
 }
 
 struct MainInformation{
     var name: String
     var description: String
     var author: String
-    var category: String //Breakfast, Lunch, Dinner, Dessert
+    var category: Category
     
     enum Category: String, CaseIterable {
         case breakfast = "Breakfast"
@@ -41,32 +46,31 @@ struct Ingredient {
     var name: String
     var quantity: Double
     var unit: Unit
-   
+        
     var description: String {
-      let formattedQuantity = String(format: "%g", quantity)
-      switch unit {
-      case .none:
-        let formattedName = quantity == 1 ? name : "\(name)s"
-        return "\(formattedQuantity) \(formattedName)"
-      default:
-        if quantity == 1 {
-          return "1 \(unit.singularName) \(name)"
-          else {
-            return "\(formattedQuantity) \(unit.rawValue) \(name)"
-          }
+        let formattedQuantity = String(format: "%g", quantity)
+        switch unit {
+        case .none:
+            let formattedName = quantity == 1 ? name : "\(name)s"
+            return "\(formattedQuantity) \(formattedName)"
+        default:
+            if quantity == 1 {
+                return "1 \(unit.singularName) \(name)"
+            } else {
+                return "\(formattedQuantity) \(unit.rawValue) \(name) "
+            }
         }
-      }
-   
-      enum Unit: String, CaseIterable {
+    }
+    
+    enum Unit: String, CaseIterable {
         case oz = "Ounces"
         case g = "Grams"
         case cups = "Cups"
         case tbs = "Tablespoons"
         case tsp = "Teaspoons"
-        case none = "No Units"
-   
+        case none = "No units"
+        
         var singularName: String { String(rawValue.dropLast()) }
-      }
     }
 }
 

@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D72E0E527F6A3AF008001C3 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D72E0E427F6A3AF008001C3 /* RecipeData.swift */; };
+		2D72E0E727F6AAFB008001C3 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D72E0E627F6AAFB008001C3 /* RecipeDetailView.swift */; };
 		2DEC1A8627F3D0CB00C9B50D /* CookcademyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC1A8527F3D0CB00C9B50D /* CookcademyApp.swift */; };
-		2DEC1A8827F3D0CB00C9B50D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC1A8727F3D0CB00C9B50D /* ContentView.swift */; };
+		2DEC1A8827F3D0CB00C9B50D /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC1A8727F3D0CB00C9B50D /* RecipesListView.swift */; };
 		2DEC1A8A27F3D0D500C9B50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DEC1A8927F3D0D500C9B50D /* Assets.xcassets */; };
 		2DEC1A8D27F3D0D500C9B50D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DEC1A8C27F3D0D500C9B50D /* Preview Assets.xcassets */; };
 		2DEC1A9827F3D24300C9B50D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC1A9727F3D24300C9B50D /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D72E0E427F6A3AF008001C3 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		2D72E0E627F6AAFB008001C3 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		2DEC1A8227F3D0CB00C9B50D /* Cookcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cookcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEC1A8527F3D0CB00C9B50D /* CookcademyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookcademyApp.swift; sourceTree = "<group>"; };
-		2DEC1A8727F3D0CB00C9B50D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2DEC1A8727F3D0CB00C9B50D /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
 		2DEC1A8927F3D0D500C9B50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DEC1A8C27F3D0D500C9B50D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2DEC1A9727F3D24300C9B50D /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
@@ -34,6 +38,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D72E0E127F6A2C8008001C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2DEC1A9727F3D24300C9B50D /* Recipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D72E0E227F6A2D1008001C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DEC1A8727F3D0CB00C9B50D /* RecipesListView.swift */,
+				2D72E0E627F6AAFB008001C3 /* RecipeDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D72E0E327F6A2D6008001C3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2D72E0E427F6A3AF008001C3 /* RecipeData.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		2DEC1A7927F3D0CB00C9B50D = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +82,10 @@
 		2DEC1A8427F3D0CB00C9B50D /* Cookcademy */ = {
 			isa = PBXGroup;
 			children = (
+				2D72E0E327F6A2D6008001C3 /* ViewModels */,
+				2D72E0E227F6A2D1008001C3 /* Views */,
+				2D72E0E127F6A2C8008001C3 /* Models */,
 				2DEC1A8527F3D0CB00C9B50D /* CookcademyApp.swift */,
-				2DEC1A8727F3D0CB00C9B50D /* ContentView.swift */,
-				2DEC1A9727F3D24300C9B50D /* Recipe.swift */,
 				2DEC1A8927F3D0D500C9B50D /* Assets.xcassets */,
 				2DEC1A8B27F3D0D500C9B50D /* Preview Content */,
 			);
@@ -141,7 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DEC1A9827F3D24300C9B50D /* Recipe.swift in Sources */,
-				2DEC1A8827F3D0CB00C9B50D /* ContentView.swift in Sources */,
+				2D72E0E727F6AAFB008001C3 /* RecipeDetailView.swift in Sources */,
+				2D72E0E527F6A3AF008001C3 /* RecipeData.swift in Sources */,
+				2DEC1A8827F3D0CB00C9B50D /* RecipesListView.swift in Sources */,
 				2DEC1A8627F3D0CB00C9B50D /* CookcademyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,9 +300,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cookcademy/Preview Content\"";
+				DEVELOPMENT_TEAM = YT9LW2E6U4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -284,7 +318,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KyleCorlett.Cookcademy;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cookcademy;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -296,9 +331,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cookcademy/Preview Content\"";
+				DEVELOPMENT_TEAM = YT9LW2E6U4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -312,7 +349,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KyleCorlett.Cookcademy;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cookcademy;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
