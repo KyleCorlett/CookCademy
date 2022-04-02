@@ -6,17 +6,21 @@
 //
 
 import SwiftUI
-private var RecipeData = RecipesData()
 
 struct RecipeCategoryGridView: View {
+    @StateObject private var recipeData = RecipeData()
+
     var body: some View {
-        NavigationView{
+        let columns = [GridItem(), GridItem()]
+        NavigationView {
             ScrollView {
-                let columns = [GridItem(), GridItem()]
                 LazyVGrid(columns: columns, content: {
-                ForEach(MainInformation.Category.allCases,
-                        id: \.self) { category in
-                    CategoryView(category: category)
+                    ForEach(MainInformation.Category.allCases, id: \.self) { category in
+                        NavigationLink(
+                            destination: RecipesListView(category: category).environmentObject(recipeData),
+                            label: {
+                                CategoryView(category: category)
+                            })
                     }
                 })
             }
