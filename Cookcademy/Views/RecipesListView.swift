@@ -11,8 +11,9 @@ struct RecipesListView: View {
     @StateObject var recipeData = RecipesData()
     var body: some View {
         List {
-            ForEach(recipeData.recipes) { recipe in
-                Text(recipe.mainInformation.name)
+            ForEach(recipes) { recipe in
+                NavigationLink(recipe.mainInformation.name,
+                               destination: RecipeDetailView(recipe: recipe))
             }
         }
         .navigationTitle("All Recipes")
