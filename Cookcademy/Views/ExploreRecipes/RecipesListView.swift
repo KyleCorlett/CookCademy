@@ -4,12 +4,14 @@
 //
 //  Created by Kyle-Joshua Corlett on 30/3/2022.
 //
-
+import Foundation
 import SwiftUI
 
 struct RecipesListView: View {
     @EnvironmentObject private var recipeData: RecipeData
     let category: MainInformation.Category
+    
+    @State private var isPresenting = false
     
     private let listBackgroundColor = AppColor.background
     private let listTextColor = AppColor.foreground
@@ -24,6 +26,15 @@ struct RecipesListView: View {
             .foregroundColor(listTextColor)
         }
         .navigationTitle(navigationTitle)
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    isPresenting = true
+                }, label: {
+                    Image(systemName: "plus")
+                })
+            }
+        })
     }
 }
 
